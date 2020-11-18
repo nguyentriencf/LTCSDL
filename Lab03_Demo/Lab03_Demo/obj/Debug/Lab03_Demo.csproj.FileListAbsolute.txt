@@ -1,0 +1,11 @@
+D:\C#\Lab03_Demo\Lab03_Demo\bin\Debug\Lab03_Demo.exe.config
+D:\C#\Lab03_Demo\Lab03_Demo\bin\Debug\Lab03_Demo.exe
+D:\C#\Lab03_Demo\Lab03_Demo\bin\Debug\Lab03_Demo.pdb
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.csprojAssemblyReference.cache
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.frmSinhVien.resources
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.Properties.Resources.resources
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.TuyChon.resources
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.csproj.GenerateResource.cache
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.csproj.CoreCompileInputs.cache
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.exe
+D:\C#\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.pdb

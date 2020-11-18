@@ -1,0 +1,14 @@
+D:\C#\Lab5_Standard\Lab5_Standard\bin\Debug\Lab5_Standard.exe.config
+D:\C#\Lab5_Standard\Lab5_Standard\bin\Debug\Lab5_Standard.exe
+D:\C#\Lab5_Standard\Lab5_Standard\bin\Debug\Lab5_Standard.pdb
+D:\C#\Lab5_Standard\Lab5_Standard\bin\Debug\Newtonsoft.Json.dll
+D:\C#\Lab5_Standard\Lab5_Standard\bin\Debug\Newtonsoft.Json.xml
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.csprojAssemblyReference.cache
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.Form1.resources
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.Properties.Resources.resources
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.csproj.GenerateResource.cache
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.csproj.CoreCompileInputs.cache
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.csproj.CopyComplete
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.exe
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.pdb
+D:\C#\Lab5_Standard\Lab5_Standard\obj\Debug\Lab5_Standard.frmThemMH.resources

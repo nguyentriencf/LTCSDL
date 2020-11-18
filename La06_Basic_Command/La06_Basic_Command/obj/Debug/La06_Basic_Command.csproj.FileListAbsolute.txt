@@ -1,0 +1,11 @@
+D:\C#\La06_Basic_Command\La06_Basic_Command\bin\Debug\La06_Basic_Command.exe.config
+D:\C#\La06_Basic_Command\La06_Basic_Command\bin\Debug\La06_Basic_Command.exe
+D:\C#\La06_Basic_Command\La06_Basic_Command\bin\Debug\La06_Basic_Command.pdb
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.csprojAssemblyReference.cache
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.FoodForm.resources
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.Form1.resources
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.Properties.Resources.resources
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.csproj.GenerateResource.cache
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.csproj.CoreCompileInputs.cache
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.exe
+D:\C#\La06_Basic_Command\La06_Basic_Command\obj\Debug\La06_Basic_Command.pdb

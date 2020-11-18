@@ -1,0 +1,13 @@
+D:\C#\Demo_lab2\Demo_lab2\bin\Debug\Demo_lab2.exe.config
+D:\C#\Demo_lab2\Demo_lab2\bin\Debug\Demo_lab2.exe
+D:\C#\Demo_lab2\Demo_lab2\bin\Debug\Demo_lab2.pdb
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.csprojAssemblyReference.cache
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.frmGiaoVien.resources
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.frmTBGiaoVien.resources
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.frmTiemKiemGV.resources
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.frmTrungTam.resources
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.Properties.Resources.resources
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.csproj.GenerateResource.cache
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.csproj.CoreCompileInputs.cache
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.exe
+D:\C#\Demo_lab2\Demo_lab2\obj\Debug\Demo_lab2.pdb

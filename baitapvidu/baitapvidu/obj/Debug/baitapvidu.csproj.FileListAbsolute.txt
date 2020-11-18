@@ -1,0 +1,10 @@
+D:\C#\baitapvidu\baitapvidu\bin\Debug\baitapvidu.exe.config
+D:\C#\baitapvidu\baitapvidu\bin\Debug\baitapvidu.exe
+D:\C#\baitapvidu\baitapvidu\bin\Debug\baitapvidu.pdb
+D:\C#\baitapvidu\baitapvidu\obj\Debug\baitapvidu.csprojAssemblyReference.cache
+D:\C#\baitapvidu\baitapvidu\obj\Debug\baitapvidu.frmSinhVien.resources
+D:\C#\baitapvidu\baitapvidu\obj\Debug\baitapvidu.Properties.Resources.resources
+D:\C#\baitapvidu\baitapvidu\obj\Debug\baitapvidu.csproj.GenerateResource.cache
+D:\C#\baitapvidu\baitapvidu\obj\Debug\baitapvidu.csproj.CoreCompileInputs.cache
+D:\C#\baitapvidu\baitapvidu\obj\Debug\baitapvidu.exe
+D:\C#\baitapvidu\baitapvidu\obj\Debug\baitapvidu.pdb

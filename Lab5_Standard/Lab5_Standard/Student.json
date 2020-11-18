@@ -1,0 +1,35 @@
+﻿[
+    {
+        "MSSV": "1812860",
+
+        "HoVaTenLot": "Nguyễn Đình Phát",
+        "Ten": "Triển",
+        "NgaySinh": "10/10/2020",
+        "CMND": "123456789",
+        "GioiTinh": true,
+        "Lop": "CTK42",
+        "SDT": "0915261627",
+        "DiaChi": "Số 1 Phù Đổng",
+        "DangKyMh": [
+            "Lập trình mạng",
+            "Lập trình cơ sở dư liệu"
+        ]
+    },
+
+    {
+        "MSSV": "1812861",
+
+        "HoVaTenLot": "Nguyên Văn",
+        "Ten": "Tèo",
+        "NgaySinh": "10/10/2020",
+        "CMND": "123456789",
+        "GioiTinh": true,
+        "Lop": "CTK42",
+        "SDT": "0915261627",
+        "DiaChi": "Số 1 Phù Đổng",
+        "DangKyMh": [
+            "Lập trình mạng",
+            "Lập trình cơ sở dư liệu"
+        ]
+    }
+]

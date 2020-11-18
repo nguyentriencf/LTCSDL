@@ -1,0 +1,28 @@
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\bin\Debug\baitap1812866.exe.config
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\bin\Debug\baitap1812866.exe
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\bin\Debug\baitap1812866.pdb
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\obj\Debug\baitap1812866.csprojResolveAssemblyReference.cache
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\obj\Debug\baitap1812866.Form1.resources
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\obj\Debug\baitap1812866.Properties.Resources.resources
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\obj\Debug\baitap1812866.csproj.GenerateResource.Cache
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\obj\Debug\baitap1812866.exe
+C:\Users\cict\Desktop\baitap1812866\baitap1812866\obj\Debug\baitap1812866.pdb
+D:\Dev\c#  WF\baitap1812866\baitap1812866\bin\Debug\baitap1812866.exe.config
+D:\Dev\c#  WF\baitap1812866\baitap1812866\bin\Debug\baitap1812866.exe
+D:\Dev\c#  WF\baitap1812866\baitap1812866\bin\Debug\baitap1812866.pdb
+D:\Dev\c#  WF\baitap1812866\baitap1812866\obj\Debug\baitap1812866.csprojAssemblyReference.cache
+D:\Dev\c#  WF\baitap1812866\baitap1812866\obj\Debug\baitap1812866.Form1.resources
+D:\Dev\c#  WF\baitap1812866\baitap1812866\obj\Debug\baitap1812866.Properties.Resources.resources
+D:\Dev\c#  WF\baitap1812866\baitap1812866\obj\Debug\baitap1812866.csproj.GenerateResource.cache
+D:\Dev\c#  WF\baitap1812866\baitap1812866\obj\Debug\baitap1812866.exe
+D:\Dev\c#  WF\baitap1812866\baitap1812866\obj\Debug\baitap1812866.pdb
+D:\C#\baitap1812866\baitap1812866\bin\Debug\baitap1812866.exe.config
+D:\C#\baitap1812866\baitap1812866\bin\Debug\baitap1812866.exe
+D:\C#\baitap1812866\baitap1812866\bin\Debug\baitap1812866.pdb
+D:\C#\baitap1812866\baitap1812866\obj\Debug\baitap1812866.csprojAssemblyReference.cache
+D:\C#\baitap1812866\baitap1812866\obj\Debug\baitap1812866.Form1.resources
+D:\C#\baitap1812866\baitap1812866\obj\Debug\baitap1812866.Properties.Resources.resources
+D:\C#\baitap1812866\baitap1812866\obj\Debug\baitap1812866.csproj.GenerateResource.cache
+D:\C#\baitap1812866\baitap1812866\obj\Debug\baitap1812866.csproj.CoreCompileInputs.cache
+D:\C#\baitap1812866\baitap1812866\obj\Debug\baitap1812866.exe
+D:\C#\baitap1812866\baitap1812866\obj\Debug\baitap1812866.pdb
