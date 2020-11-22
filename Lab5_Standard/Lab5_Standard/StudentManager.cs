@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Lab5_Standard
 {
-    public delegate bool CompareFunc(Student student, SearchType searchType, string keyword );
+    public interface IDataSource
+    {
+        string FilePath { get; }
+        List<Student> GetStudents();
+        void Save(List<Student> studentlist);
+    }
     public class StudentManager
     {
         private readonly IDataSource _dataSource;
@@ -53,11 +58,11 @@ namespace Lab5_Standard
             if (string.IsNullOrWhiteSpace(mssv))
                 throw new ArgumentException($"MÃ sinh viên không hợp lệ");
 
-            var isExist = _studentList.Exists(sd => sd.MSSV == mssv);
+            var isExist = _studentList.Exists(SV=> SV.MSSV == mssv);
             if (!isExist)
                 throw new ArgumentException($"không tồn tại SV có {mssv}");
 
-            var index = _studentList.FindIndex(sd=> sd.MSSV == mssv);
+            var index = _studentList.FindIndex(SV=> SV.MSSV == mssv);
             _studentList[index] = studentUpdate;
 
             _dataSource.Save(_studentList);

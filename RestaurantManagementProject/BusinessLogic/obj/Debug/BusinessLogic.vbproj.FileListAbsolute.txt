@@ -1,0 +1,14 @@
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\bin\Debug\BusinessLogic.xml
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\bin\Debug\DataAccess.dll
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\bin\Debug\DataAccess.xml
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.vbprojAssemblyReference.cache
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.Resources.resources
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.vbproj.GenerateResource.cache
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.vbproj.CoreCompileInputs.cache
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.vbproj.CopyComplete
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.xml
+D:\C#\LTCSDL\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.pdb

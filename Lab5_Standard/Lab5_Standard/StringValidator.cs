@@ -27,16 +27,16 @@ namespace Lab5_Standard
             if (sanitizeString(raw).Length != length)
                 throw new Exception(errMessage);
         }
-        public static void CheckMinLength(string raw, int min, string errMessage)
-        {
-            if (sanitizeString(raw).Length < min)
-                throw new Exception(errMessage);
-        }
-        public static void CheckMaxLength(string raw, int max, string errMessage)
-        {
-            if (sanitizeString(raw).Length > max)
-                throw new Exception(errMessage);
-        }
+        //public static void CheckMinLength(string raw, int min, string errMessage)
+        //{
+        //    if (sanitizeString(raw).Length < min)
+        //        throw new Exception(errMessage);
+        //}
+        //public static void CheckMaxLength(string raw, int max, string errMessage)
+        //{
+        //    if (sanitizeString(raw).Length > max)
+        //        throw new Exception(errMessage);
+        //}
      
     }
 }

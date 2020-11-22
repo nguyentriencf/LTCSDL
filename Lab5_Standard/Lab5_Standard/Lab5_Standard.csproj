@@ -61,7 +61,6 @@
     <Compile Include="frmThemMH.Designer.cs">
       <DependentUpon>frmThemMH.cs</DependentUpon>
     </Compile>
-    <Compile Include="IDataSource.cs" />
     <Compile Include="JsonDataSource.cs" />
     <Compile Include="PlainTextDataSourcecs.cs" />
     <Compile Include="Program.cs" />

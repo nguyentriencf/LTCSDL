@@ -1,0 +1,11 @@
+D:\C#\LTCSDL\Test_lab06\Test_lab06\bin\Debug\Test_lab06.exe.config
+D:\C#\LTCSDL\Test_lab06\Test_lab06\bin\Debug\Test_lab06.exe
+D:\C#\LTCSDL\Test_lab06\Test_lab06\bin\Debug\Test_lab06.pdb
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.csprojAssemblyReference.cache
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.Form1.resources
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.Properties.Resources.resources
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.csproj.GenerateResource.cache
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.csproj.CoreCompileInputs.cache
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.exe
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.pdb
+D:\C#\LTCSDL\Test_lab06\Test_lab06\obj\Debug\Test_lab06.frmFood.resources
