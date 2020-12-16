@@ -18,6 +18,7 @@ namespace La06_Basic_Command
         {
             InitializeComponent();
         }
+        List<Food> listFoodbyCateID = null;
 
         private void FoodForm_Load(object sender, EventArgs e)
         {
@@ -25,30 +26,20 @@ namespace La06_Basic_Command
         }
         public void LoadFood(int categoryID)
         {
-            string con = "server = DESKTOP - UPDAPIH\\SQLEXPRESS01; database = RestaurantManagement; Integrated Security = true";
-            SqlConnection sqlConnection = new SqlConnection(con);
-            SqlCommand sqlCommand = sqlConnection.CreateCommand();
+            listFoodbyCateID = new List<Food>();   
+          DataTable table =  DataProvider.Instance.ExcuteDataReader("select * from Food where FoodCategoryID = " + categoryID);
+            foreach (DataRow row in table.Rows)
+            {
+                Food food = new Food(row, table);
+                listFoodbyCateID.Add(food);
+            }
+            dgvFood.DataSource = listFoodbyCateID;
 
-            sqlCommand.CommandText = "select Name From Category where ID = " + categoryID;
+        }
 
-            sqlConnection.Open();
-
-            string catName = sqlCommand.ExecuteScalar().ToString();
-            this.Text = "Danh sách các món ăn thuộc loại: "+ catName;
-
-            sqlCommand.CommandText = "select * from Food where FoodCategoryID = " + categoryID;
-
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand);
-
-            DataTable data = new DataTable("Food");
-
-            dataAdapter.Fill(data);
-
-            dgvFood.DataSource = data;
-
-            sqlCommand.Clone();
-            sqlConnection.Dispose();
-            dataAdapter.Dispose();
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

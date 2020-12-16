@@ -17,163 +17,109 @@ namespace La06_Basic_Command
         public Form1()
         {
             InitializeComponent();
+           
         }
-
+        List<Category> listCategory = null;
+        int[] arrIDU = new int[] { 0, 1, 2 };
+        int IDCategory = 0;
+        List<Food> listFood = null;
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            string connectString = "server=DESKTOP-UPDAPIH\\SQLEXPRESS01; database=RestaurantManagement; Integrated Security = true";
-            SqlConnection sqlConnection = new SqlConnection(connectString);
-            SqlCommand sqlCommand = sqlConnection.CreateCommand();
-            string query = "select ID, Name, Type from Category";
-            sqlCommand.CommandText = query;
-            
-            sqlConnection.Open();
-
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            this.DisplayCategory(sqlDataReader);
-
-            sqlConnection.Close();
-        }
-
-        private void DisplayCategory( SqlDataReader reader)
-        {
-            lvCategory.Items.Clear();
-            while (reader.Read())
+           
+            listCategory = new List<Category>();
+            DataTable table =  DataProvider.Instance.ExcuteDataReader("select * from Category");
+            foreach (DataRow row in table.Rows)
             {
-                ListViewItem item = new ListViewItem(reader["ID"].ToString());
-                item.SubItems.Add(reader["Name"].ToString());
-                item.SubItems.Add(reader["Type"].ToString());
-                lvCategory.Items.Add(item);
+                Category category = new Category(row, table);
+                listCategory.Add(category);
             }
+            dgvCategory.DataSource = listCategory;
+         
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string  con = "server=DESKTOP-UPDAPIH\\SQLEXPRESS01; database=RestaurantManagement; Integrated Security = true";
-            SqlConnection sqlConnection = new SqlConnection(con);
-            SqlCommand sqlCommand = sqlConnection.CreateCommand();
-            string query = "Insert into Category(Name,[Type])" + "values(N'" + txtName.Text + "'," + txtType.Text + ")";
-            sqlCommand.CommandText = query;
-            sqlConnection.Open();
-
-            int sodonganhhuong = sqlCommand.ExecuteNonQuery();
-
-            sqlConnection.Close();
-
-            if (sodonganhhuong >0)
+            var filter = from p in listCategory
+                         where p.Name.CompareTo(txtName.Text)==0
+                         select p;
+            if (filter.Count()==0)
             {
-                MessageBox.Show("thêm thành công");
+                DataProvider.Instance.ExcuteNonQuery("[dbo].[Food_Insert] @Name , @Type", new object[] { txtName.Text, txtType.Text });
                 btnLoad.PerformClick();
-
-                txtName.Text = "";
-                txtType.Text = "";
+                MessageBox.Show("Thêm thành công");
             }
-            else
-            {
-                MessageBox.Show("đã có lỗi xảy ra");
-            }
-        }
-
-        private void lvCategory_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = this.lvCategory.SelectedItems[0];
-            txtID.Text = item.SubItems[0].Text;
-            txtName.Text = item.SubItems[1].Text;
-            txtType.Text = item.SubItems[2].Text == "0"? "Thức uống" : "Thức ăn";
-            this.btnCapNhat.Enabled = true;
-            this.btnXoa.Enabled = true;
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            string con = "server=DESKTOP-UPDAPIH\\SQLEXPRESS01; database=RestaurantManagement; Integrated Security = true";
-            SqlConnection sqlConnection = new SqlConnection(con);
-            SqlCommand sqlCommand = sqlConnection.CreateCommand();
-            string type;
-            if (txtType.Text == "Thức uống")
-                type = "0";
-            else
-                type = "1";
-
-
-            sqlCommand.CommandText = "update Category set Name= N'" + txtName.Text+ "', Type = " + type +
-                                  " where ID =" + txtID.Text;
-            sqlConnection.Open();
-
-            int data = sqlCommand.ExecuteNonQuery();
-
-            sqlConnection.Close();
-            if (data == 1)
-            {
-                ListViewItem item = lvCategory.SelectedItems[0];
-                item.SubItems[1].Text = txtName.Text;
-
-                item.SubItems[2].Text = txtType.Text;              
-
-                MessageBox.Show("cập nhật thành công");         
-                txtID.Text = "";
-                txtName.Text = "";
-                txtType.Text = "";
-                btnCapNhat.Enabled = false;
-                btnXoa.Enabled = false;
-            }
-            else
-            {
-                MessageBox.Show("Đã có lỗi xảy ra");
-            }    
+            DataProvider.Instance.ExcuteNonQuery("[dbo].[Category_InsertUpdateDelete] @ID , @Name , @Type , @Action", new object[] {txtID.Text, txtName.Text, txtType.Text, arrIDU[1]}); 
+           // dgvCategory.Rows.Clear();
+            btnLoad.PerformClick();
+            MessageBox.Show("Update thành công");
+            Resetform();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
-        {
-            string con ="server=DESKTOP-UPDAPIH\\SQLEXPRESS01; database=RestaurantManagement; Integrated Security = true";
-            SqlConnection sqlConnection = new SqlConnection(con);
-            SqlCommand sqlCommand = sqlConnection.CreateCommand();
-            sqlCommand.CommandText = $"DELETE FROM Category  where ID = { txtID.Text}"; 
-            
-            sqlConnection.Open();
-
-            int data = sqlCommand.ExecuteNonQuery();
-
-           
-            if (data != 1)
+        {     
+            listFood = new List<Food>();
+            DataTable data = DataProvider.Instance.ExcuteDataReader("select * from Food");
+            foreach (DataRow row in data.Rows)
             {
-
-                MessageBox.Show("Đã có lỗi xảy ra");
-                return;                
+                Food food = new Food(row, data);
+                listFood.Add(food);
+            }
+            var filter = from f in listFood
+                         where f.FoodCategoryID.CompareTo(txtID.Text) == 0
+                         select f;
+            if (filter.Count() ==0)
+            {
+                DataProvider.Instance.ExcuteNonQuery("[dbo].[Category_InsertUpdateDelete] @ID , @Name , @Type , @Action", new object[] { txtID.Text, txtName.Text, txtType.Text, arrIDU[2] });
+                // dgvCategory.Rows.Clear();
+                btnLoad.PerformClick();
+                MessageBox.Show("xoá thành công");
             }
             else
             {
-                ListViewItem lvItem = lvCategory.SelectedItems[0];
-                lvCategory.Items.Remove(lvItem);
-                txtID.Text = "";
-                txtName.Text = "";
-                txtType.Text = "";
-                MessageBox.Show("Xoá thành công");
-                sqlConnection.Close();
-
+                MessageBox.Show("Đã tồn tại ID category trong csdl");
             }
-        }
-
-        private void tsmDelete_Click(object sender, EventArgs e)
-        {
-            if (lvCategory.SelectedItems.Count > 0)
-                btnXoa.PerformClick();
-            
-        }
-
-        private void tsmViewFood_Click(object sender, EventArgs e)
-        {
-            if (txtID.Text != "")
-            {
-                FoodForm foodForm = new FoodForm();
-                foodForm.Show(this);
-                foodForm.LoadFood(Convert.ToInt32(txtID.Text));
-            }
+            Resetform();  
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+         
+        }
 
+        private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dgvCategory[0, e.RowIndex].FormattedValue.ToString();
+            txtName.Text = dgvCategory[1, e.RowIndex].FormattedValue.ToString();
+            txtType.Text = dgvCategory[2, e.RowIndex].FormattedValue.ToString();
+            btnCapNhat.Enabled = true;
+            btnXoa.Enabled = true;
+            btnThem.Enabled = false;
+           
+        }
+        private void Resetform()
+        {
+            txtID.Text = "";
+            txtType.Text = "";
+            txtName.Text = "";
+            btnCapNhat.Enabled = false;
+            btnXoa.Enabled = false;
+            btnThem.Enabled = true;
+        }
+
+        private void xoáToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnXoa.PerformClick();
+        }
+
+        private void xemNhómMónĂnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FoodForm foodForm = new FoodForm();
+            foodForm.LoadFood(int.Parse(txtID.Text));
+            foodForm.Show();
         }
     }
 }

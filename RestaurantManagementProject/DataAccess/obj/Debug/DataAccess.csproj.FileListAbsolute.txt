@@ -1,0 +1,6 @@
+D:\C#\LTCSDL\RestaurantManagementProject\DataAccess\bin\Debug\DataAccess.dll
+D:\C#\LTCSDL\RestaurantManagementProject\DataAccess\bin\Debug\DataAccess.pdb
+D:\C#\LTCSDL\RestaurantManagementProject\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+D:\C#\LTCSDL\RestaurantManagementProject\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\C#\LTCSDL\RestaurantManagementProject\DataAccess\obj\Debug\DataAccess.dll
+D:\C#\LTCSDL\RestaurantManagementProject\DataAccess\obj\Debug\DataAccess.pdb

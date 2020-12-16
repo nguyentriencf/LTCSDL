@@ -4,9 +4,7 @@ D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\bin\Debug\R
 D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\bin\Debug\BusinessLogic.dll
 D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\bin\Debug\DataAccess.dll
 D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\bin\Debug\BusinessLogic.pdb
-D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\bin\Debug\BusinessLogic.xml
 D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\bin\Debug\DataAccess.pdb
-D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\bin\Debug\DataAccess.xml
 D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\obj\Debug\RestaurantManagementProject.csprojAssemblyReference.cache
 D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\obj\Debug\RestaurantManagementProject.Form1.resources
 D:\C#\LTCSDL\RestaurantManagementProject\RestaurantManagementProject\obj\Debug\RestaurantManagementProject.Properties.Resources.resources

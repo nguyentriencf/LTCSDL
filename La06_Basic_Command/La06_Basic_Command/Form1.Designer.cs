@@ -30,13 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnLoad = new System.Windows.Forms.Button();
-            this.lvCategory = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmViewFood = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +39,14 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.dgvCategory = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xoáToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xemNhómMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,62 +59,6 @@
             this.btnLoad.Text = "Lấy dữ liệu";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // lvCategory
-            // 
-            this.lvCategory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.lvCategory.ContextMenuStrip = this.contextMenuStrip1;
-            this.lvCategory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lvCategory.FullRowSelect = true;
-            this.lvCategory.HideSelection = false;
-            this.lvCategory.Location = new System.Drawing.Point(0, 166);
-            this.lvCategory.MultiSelect = false;
-            this.lvCategory.Name = "lvCategory";
-            this.lvCategory.Size = new System.Drawing.Size(741, 171);
-            this.lvCategory.TabIndex = 1;
-            this.lvCategory.UseCompatibleStateImageBehavior = false;
-            this.lvCategory.View = System.Windows.Forms.View.Details;
-            this.lvCategory.Click += new System.EventHandler(this.lvCategory_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã loại";
-            this.columnHeader1.Width = 207;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên Loại món ăn";
-            this.columnHeader2.Width = 358;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Loại";
-            this.columnHeader3.Width = 191;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmDelete,
-            this.tsmViewFood});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 48);
-            // 
-            // tsmDelete
-            // 
-            this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(210, 22);
-            this.tsmDelete.Text = "Xoá nhóm sản phẩm";
-            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
-            // 
-            // tsmViewFood
-            // 
-            this.tsmViewFood.Name = "tsmViewFood";
-            this.tsmViewFood.Size = new System.Drawing.Size(210, 22);
-            this.tsmViewFood.Text = "Xem danh sách sản phẩm";
-            this.tsmViewFood.Click += new System.EventHandler(this.tsmViewFood_Click);
             // 
             // label1
             // 
@@ -196,11 +141,67 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // dgvCategory
+            // 
+            this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Name,
+            this.Type});
+            this.dgvCategory.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvCategory.Location = new System.Drawing.Point(12, 175);
+            this.dgvCategory.Name = "dgvCategory";
+            this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCategory.Size = new System.Drawing.Size(679, 150);
+            this.dgvCategory.TabIndex = 11;
+            this.dgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "Mã Loại";
+            this.ID.Name = "ID";
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.HeaderText = "Tên Loại món ăn";
+            this.Name.Name = "Name";
+            // 
+            // Type
+            // 
+            this.Type.DataPropertyName = "Type";
+            this.Type.HeaderText = "Loại";
+            this.Type.Name = "Type";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xoáToolStripMenuItem,
+            this.xemNhómMónĂnToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(178, 48);
+            // 
+            // xoáToolStripMenuItem
+            // 
+            this.xoáToolStripMenuItem.Name = "xoáToolStripMenuItem";
+            this.xoáToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.xoáToolStripMenuItem.Text = "Xoá ";
+            this.xoáToolStripMenuItem.Click += new System.EventHandler(this.xoáToolStripMenuItem_Click);
+            // 
+            // xemNhómMónĂnToolStripMenuItem
+            // 
+            this.xemNhómMónĂnToolStripMenuItem.Name = "xemNhómMónĂnToolStripMenuItem";
+            this.xemNhómMónĂnToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.xemNhómMónĂnToolStripMenuItem.Text = "Xem nhóm món ăn";
+            this.xemNhómMónĂnToolStripMenuItem.Click += new System.EventHandler(this.xemNhómMónĂnToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 337);
+            this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
@@ -210,11 +211,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lvCategory);
             this.Controls.Add(this.btnLoad);
-            this.Name = "Form1";
+        //    this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,10 +225,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.ListView lvCategory;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -236,10 +233,14 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tsmDelete;
-        private System.Windows.Forms.ToolStripMenuItem tsmViewFood;
         public System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.DataGridView dgvCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem xoáToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xemNhómMónĂnToolStripMenuItem;
     }
 }
 

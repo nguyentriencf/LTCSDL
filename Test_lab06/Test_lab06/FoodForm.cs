@@ -38,9 +38,7 @@ namespace Test_lab06
 
             sqlCommand.CommandText = "select * from Food where FoodCategoryID = " + categoryID;
 
-        
-
-           
+          
             //tạo đối tương DataAdapter
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
             
