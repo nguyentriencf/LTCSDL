@@ -26,26 +26,21 @@ namespace Lab07_Advanced_Command
 
         }
         public void LoadCategory()
-        {
-            //string connection = "server=DESKTOP-UPDAPIH\\SQLEXPRESS01; database= RestaurentManagement; Integrated Security = true";
-            string connectString = "server=DESKTOP-UPDAPIH\\SQLEXPRESS01; database=RestaurantManagement; Integrated Security = true";
-            SqlConnection sqlConnection = new SqlConnection(connectString);
-
-            SqlCommand sqlComman = sqlConnection.CreateCommand();
-            sqlComman.CommandText = "select ID, Name from Category";
-
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlComman);
-            DataTable data = new DataTable();
-
-            sqlConnection.Open();
-            sqlDataAdapter.Fill(data);
-            sqlConnection.Close();
-            sqlConnection.Dispose();
-
-            cbbCategory.DataSource = data;
-
+        {           
+            cbbCategory.DataSource = DataProvider.Instance.ExcuteDataReader("select * from Category");
             cbbCategory.DisplayMember = "Name";
-            cbbCategory.ValueMember = "ID";        
+            cbbCategory.ValueMember = "ID";
+           
+        }
+
+        private void cbbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int idCategory = int.Parse(cbbCategory.GetItemText(this.cbbCategory.SelectedItem));
+            dgvFoodList.DataSource = DataProvider.Instance.ExcuteDataReader("select * from Food where FoodCategoryID =" + idCategory);
+
+            lblQuantity.Text = dgvFoodList.Rows.Count.ToString();
+            lblCatName.Text = cbbCategory.Text;
         }
     }
 }

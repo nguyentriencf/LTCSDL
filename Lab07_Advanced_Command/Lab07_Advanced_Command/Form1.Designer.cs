@@ -35,6 +35,12 @@
             this.lblCatName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +51,7 @@
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(175, 21);
             this.cbbCategory.TabIndex = 0;
+            this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -61,6 +68,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvFoodList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFoodList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Name,
+            this.Unit,
+            this.FoodCategoryID,
+            this.Price,
+            this.Notes});
             this.dgvFoodList.Location = new System.Drawing.Point(4, 71);
             this.dgvFoodList.MultiSelect = false;
             this.dgvFoodList.Name = "dgvFoodList";
@@ -103,6 +117,42 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "món ăn thuộc nhóm";
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "Mã";
+            this.ID.Name = "ID";
+            // 
+            // Name
+            // 
+            this.Name.DataPropertyName = "Name";
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            // 
+            // Unit
+            // 
+            this.Unit.DataPropertyName = "Unit";
+            this.Unit.HeaderText = "Unit";
+            this.Unit.Name = "Unit";
+            // 
+            // FoodCategoryID
+            // 
+            this.FoodCategoryID.DataPropertyName = "FoodCategoryID";
+            this.FoodCategoryID.HeaderText = "FoodCategoryID";
+            this.FoodCategoryID.Name = "FoodCategoryID";
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            // 
+            // Notes
+            // 
+            this.Notes.DataPropertyName = "Notes";
+            this.Notes.HeaderText = "Notes";
+            this.Notes.Name = "Notes";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,7 +165,7 @@
             this.Controls.Add(this.dgvFoodList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbCategory);
-            this.Name = "Form1";
+         //   this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).EndInit();
@@ -132,6 +182,12 @@
         private System.Windows.Forms.Label lblCatName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodCategoryID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
     }
 }
 

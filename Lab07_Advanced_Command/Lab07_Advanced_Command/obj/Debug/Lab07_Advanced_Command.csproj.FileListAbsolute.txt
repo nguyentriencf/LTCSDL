@@ -8,3 +8,13 @@ D:\C#\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Com
 D:\C#\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.csproj.CoreCompileInputs.cache
 D:\C#\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.exe
 D:\C#\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.pdb
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\bin\Debug\Lab07_Advanced_Command.exe.config
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\bin\Debug\Lab07_Advanced_Command.exe
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\bin\Debug\Lab07_Advanced_Command.pdb
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.csprojAssemblyReference.cache
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.Form1.resources
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.Properties.Resources.resources
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.csproj.GenerateResource.cache
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.csproj.CoreCompileInputs.cache
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.exe
+D:\C#\LTCSDL\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.pdb

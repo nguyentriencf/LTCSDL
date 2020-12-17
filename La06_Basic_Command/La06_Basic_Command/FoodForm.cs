@@ -27,7 +27,7 @@ namespace La06_Basic_Command
         public void LoadFood(int categoryID)
         {
             listFoodbyCateID = new List<Food>();   
-          DataTable table =  DataProvider.Instance.ExcuteDataReader("select * from Food where FoodCategoryID = " + categoryID);
+            DataTable table =  DataProvider.Instance.ExcuteDataReader("select * from Food where FoodCategoryID = " + categoryID);
             foreach (DataRow row in table.Rows)
             {
                 Food food = new Food(row, table);

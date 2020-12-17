@@ -61,19 +61,13 @@ namespace La06_Basic_Command
 
         private void btnXoa_Click(object sender, EventArgs e)
         {     
-            listFood = new List<Food>();
-            DataTable data = DataProvider.Instance.ExcuteDataReader("select * from Food");
-            foreach (DataRow row in data.Rows)
-            {
-                Food food = new Food(row, data);
-                listFood.Add(food);
-            }
+           
             var filter = from f in listFood
-                         where f.FoodCategoryID.CompareTo(txtID.Text) == 0
+                         where f.FoodCategoryID.CompareTo(int.Parse(txtID.Text))==0
                          select f;
             if (filter.Count() ==0)
             {
-                DataProvider.Instance.ExcuteNonQuery("[dbo].[Category_InsertUpdateDelete] @ID , @Name , @Type , @Action", new object[] { txtID.Text, txtName.Text, txtType.Text, arrIDU[2] });
+                DataProvider.Instance.ExcuteNonQuery("[dbo].[Category_InsertUpdateDelete] @ID , @Name , @Type , @Action", new object[] { int.Parse(txtID.Text), txtName.Text, txtType.Text, 2 });
                 // dgvCategory.Rows.Clear();
                 btnLoad.PerformClick();
                 MessageBox.Show("xoá thành công");
@@ -87,7 +81,13 @@ namespace La06_Basic_Command
 
         private void Form1_Load(object sender, EventArgs e)
         {
-         
+            listFood = new List<Food>();
+            DataTable data = DataProvider.Instance.ExcuteDataReader("select * from Food");
+            foreach (DataRow row in data.Rows)
+            {
+                Food food = new Food(row, data);
+                listFood.Add(food);
+            }
         }
 
         private void dgvCategory_CellClick(object sender, DataGridViewCellEventArgs e)
