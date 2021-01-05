@@ -19,6 +19,7 @@ namespace Onthicuoiki
             InitializeComponent();
         }
         List<TableDTO> listTableDTO = null;
+        List<CurrentBillDTO> listCurrentBillDTO = null;
         private void Form1_Load(object sender, EventArgs e)
         {
             loadDSBan();   
@@ -88,7 +89,8 @@ namespace Onthicuoiki
         }
         public void CurrrentBill(int IdTable)
         {
-            dgvCurrentBill.DataSource = CurrentBillDAO.Instance.GetCurrentBill(IdTable);
+             listCurrentBillDTO = CurrentBillDAO.Instance.GetCurrentBill(IdTable);
+             dgvCurrentBill.DataSource = listCurrentBillDTO;       
         }
     }
 }

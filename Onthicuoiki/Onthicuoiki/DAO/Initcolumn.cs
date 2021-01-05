@@ -11,12 +11,12 @@ namespace Onthicuoiki.DAO
     {
         public static List<string> init(DataTable table)
         {
-            List<string> nameCol = new List<string>();
+            List<string> listNameCol = new List<string>();
             foreach (DataColumn column in table.Columns)
             {
-                nameCol.Add(column.ColumnName.ToString());
+                listNameCol.Add(column.ColumnName.ToString());
             }
-            return nameCol;
+            return listNameCol;
         }
     }
 }

@@ -31,17 +31,14 @@ namespace Onthicuoiki.DAO
         }
         public bool InsertTable(string name_, int status_, int capacity_)
         {
-            TableDTO tableDTO = new TableDTO();
-            tableDTO.name_ = name_;
-            tableDTO.status_ = status_;
-            tableDTO.capacity_ = capacity_;
+       
              string query = "[dbo].[InsertTable] @name , @status , @capacity";
-             bool result= DataProvider.Instance.ExcuteNonQuery(query,new object[]{tableDTO.name_, tableDTO.status_, tableDTO.capacity_});
+             bool result= DataProvider.Instance.ExcuteNonQuery(query,new object[]{name_, status_, capacity_});
              return result;
         }
         public bool UpdateTable(TableDTO tableDTO)
         {
-            string query = "[dbo].[Table_Update] @id @Name @status @Capacity";
+            string query = "[dbo].[Table_Update] @id , @Name , @status , @Capacity";
             bool result = DataProvider.Instance.ExcuteNonQuery(query, new object[] {tableDTO.iD_, tableDTO.name_, tableDTO.status_, tableDTO.capacity_});
             return result;
         }

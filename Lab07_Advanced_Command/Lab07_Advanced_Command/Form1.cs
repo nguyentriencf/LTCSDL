@@ -61,10 +61,6 @@ namespace Lab07_Advanced_Command
             lblCatName.Text = cbbCategory.Text;
         }
 
-     
-
-    
-
         private void dgvFoodList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             foodId = int.Parse(dgvFoodList[0, e.RowIndex].FormattedValue.ToString());
@@ -79,6 +75,11 @@ namespace Lab07_Advanced_Command
             {
                 MessageBox.Show("Tổng số món ăn " + namefood + " đã bán là: " + result + " " + unit);
             }
+        }
+
+        private void tsmAddFood_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,6 +35,7 @@ namespace Onthicuoiki.DAO
                 DataTable data = new DataTable();
                 using (SqlConnection conn = new SqlConnection(strCon))
                 {
+                    if (conn.State == ConnectionState.Closed) conn.Open();
                     SqlCommand cmd = new SqlCommand(query,conn);
                     if (para != null)
                     {
@@ -76,9 +77,11 @@ namespace Onthicuoiki.DAO
         {
             try
             {
+
                 int count = 0;
                 using (SqlConnection conn = new SqlConnection(strCon))
                 {
+                    if (conn.State == ConnectionState.Closed) conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
                     if (para != null)
                     {
@@ -93,7 +96,7 @@ namespace Onthicuoiki.DAO
                         count = (int)cmd.ExecuteScalar();
                     }
                 }
-                return count;     
+                return count;
             }
             catch (Exception)
             {

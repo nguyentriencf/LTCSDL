@@ -139,7 +139,7 @@
             this.toolStripMenuItem1,
             this.tsmUpdateFood});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 88);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 110);
             // 
             // tsmCalculateQuantity
             // 
@@ -163,6 +163,7 @@
             this.tsmAddFood.Name = "tsmAddFood";
             this.tsmAddFood.Size = new System.Drawing.Size(232, 22);
             this.tsmAddFood.Text = "Thêm món ăn";
+            this.tsmAddFood.Click += new System.EventHandler(this.tsmAddFood_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -223,7 +224,7 @@
             this.Controls.Add(this.dgvFoodList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbCategory);
-          //  this.Name = "Form1";
+          //this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).EndInit();
