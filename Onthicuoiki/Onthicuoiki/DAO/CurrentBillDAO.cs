@@ -11,7 +11,6 @@ namespace Onthicuoiki.DAO
    public class CurrentBillDAO
     {
         private static readonly CurrentBillDAO instance;
-       
 
         public static CurrentBillDAO Instance
         {
@@ -20,7 +19,8 @@ namespace Onthicuoiki.DAO
         public List<CurrentBillDTO> GetCurrentBill(int tableID)
         {
             List<CurrentBillDTO> listCurrentBill = new List<CurrentBillDTO>();
-            DataTable table=   DataProvider.Instance.ExcuteQuery("[dbo].[CurrentBill] @tableID", new object[] {tableID });
+            string query = "[dbo].[CurrentBill] @tableID";
+            DataTable table=   DataProvider.Instance.ExcuteQuery(query, new object[] {tableID });
             foreach (DataRow row in table.Rows)
             {
                 CurrentBillDTO currentBill = new CurrentBillDTO(row, table);

@@ -9,7 +9,6 @@ namespace Onthicuoiki.DAO
 {
    public class Initcolumn
     {
-
         public static List<string> init(DataTable table)
         {
             List<string> nameCol = new List<string>();

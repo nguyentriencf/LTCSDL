@@ -41,7 +41,7 @@ namespace Onthicuoiki.DAO
         }
         public bool UpdateTable(TableDTO tableDTO)
         {
-            string query = "[dbo].[Table_Update] @id , @Name , @status , @Capacity";
+            string query = "[dbo].[Table_Update] @id @Name @status @Capacity";
             bool result = DataProvider.Instance.ExcuteNonQuery(query, new object[] {tableDTO.iD_, tableDTO.name_, tableDTO.status_, tableDTO.capacity_});
             return result;
         }

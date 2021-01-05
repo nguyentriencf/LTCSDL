@@ -33,7 +33,7 @@ namespace Onthicuoiki
         {
             txtID.Text = dgvListTable[0, e.RowIndex].FormattedValue.ToString();
             txtName.Text = dgvListTable[1, e.RowIndex].FormattedValue.ToString();
-            int trangthai=int.Parse(dgvListTable[2, e.RowIndex].FormattedValue.ToString());
+            int trangthai =int.Parse(dgvListTable[2, e.RowIndex].FormattedValue.ToString());
             if (trangthai == 0)
                 cbStatus.Text = cbStatus.Items[0].ToString();
             else

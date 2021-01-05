@@ -67,9 +67,9 @@ namespace Onthicuoiki.DAO
                 }
                 return kq > 0;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             } 
         }
         public int ExcuteScalar(string query, object[] para)
