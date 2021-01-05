@@ -1,0 +1,10 @@
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\bin\Debug\Onthicuoiki.exe.config
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\bin\Debug\Onthicuoiki.exe
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\bin\Debug\Onthicuoiki.pdb
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\obj\Debug\Onthicuoiki.csprojAssemblyReference.cache
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\obj\Debug\Onthicuoiki.Form1.resources
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\obj\Debug\Onthicuoiki.Properties.Resources.resources
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\obj\Debug\Onthicuoiki.csproj.GenerateResource.cache
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\obj\Debug\Onthicuoiki.csproj.CoreCompileInputs.cache
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\obj\Debug\Onthicuoiki.exe
+D:\C#\LTCSDL\Onthicuoiki\Onthicuoiki\obj\Debug\Onthicuoiki.pdb

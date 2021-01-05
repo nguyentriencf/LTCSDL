@@ -28,20 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFoodList = new System.Windows.Forms.DataGridView();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblCatName = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodCategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmCalculateQuantity = new System.Windows.Forms.ToolStripMenuItem();
+            this.thêmMónĂnToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmAddFood = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmUpdateFood = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblCatName = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbbCategory
@@ -75,47 +84,14 @@
             this.FoodCategoryID,
             this.Price,
             this.Notes});
+            this.dgvFoodList.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvFoodList.Location = new System.Drawing.Point(4, 71);
             this.dgvFoodList.MultiSelect = false;
             this.dgvFoodList.Name = "dgvFoodList";
+            this.dgvFoodList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFoodList.Size = new System.Drawing.Size(681, 229);
             this.dgvFoodList.TabIndex = 2;
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(110, 332);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(82, 13);
-            this.lblQuantity.TabIndex = 3;
-            this.lblQuantity.Text = "...";
-            // 
-            // lblCatName
-            // 
-            this.lblCatName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCatName.Location = new System.Drawing.Point(237, 332);
-            this.lblCatName.Name = "lblCatName";
-            this.lblCatName.Size = new System.Drawing.Size(101, 23);
-            this.lblCatName.TabIndex = 4;
-            this.lblCatName.Text = "...";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 332);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 23);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Có tấ cả";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(142, 332);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 23);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "món ăn thuộc nhóm";
+            this.dgvFoodList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFoodList_CellClick);
             // 
             // ID
             // 
@@ -153,6 +129,88 @@
             this.Notes.HeaderText = "Notes";
             this.Notes.Name = "Notes";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmCalculateQuantity,
+            this.thêmMónĂnToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.tsmAddFood,
+            this.toolStripMenuItem1,
+            this.tsmUpdateFood});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 88);
+            // 
+            // tsmCalculateQuantity
+            // 
+            this.tsmCalculateQuantity.Name = "tsmCalculateQuantity";
+            this.tsmCalculateQuantity.Size = new System.Drawing.Size(232, 22);
+            this.tsmCalculateQuantity.Text = "tính số lượng số lượng đã bán";
+            this.tsmCalculateQuantity.Click += new System.EventHandler(this.tsmCalculateQuantity_Click);
+            // 
+            // thêmMónĂnToolStripMenuItem
+            // 
+            this.thêmMónĂnToolStripMenuItem.Name = "thêmMónĂnToolStripMenuItem";
+            this.thêmMónĂnToolStripMenuItem.Size = new System.Drawing.Size(229, 6);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(229, 6);
+            // 
+            // tsmAddFood
+            // 
+            this.tsmAddFood.Name = "tsmAddFood";
+            this.tsmAddFood.Size = new System.Drawing.Size(232, 22);
+            this.tsmAddFood.Text = "Thêm món ăn";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(229, 6);
+            // 
+            // tsmUpdateFood
+            // 
+            this.tsmUpdateFood.Name = "tsmUpdateFood";
+            this.tsmUpdateFood.Size = new System.Drawing.Size(232, 22);
+            this.tsmUpdateFood.Text = "Sửa món ăn ";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(110, 332);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(82, 13);
+            this.lblQuantity.TabIndex = 3;
+            this.lblQuantity.Text = "...";
+            // 
+            // lblCatName
+            // 
+            this.lblCatName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatName.Location = new System.Drawing.Point(237, 332);
+            this.lblCatName.Name = "lblCatName";
+            this.lblCatName.Size = new System.Drawing.Size(101, 23);
+            this.lblCatName.TabIndex = 4;
+            this.lblCatName.Text = "...";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(45, 332);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 23);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Có tấ cả";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(142, 332);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 23);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "món ăn thuộc nhóm";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,10 +223,11 @@
             this.Controls.Add(this.dgvFoodList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbCategory);
-         //   this.Name = "Form1";
+          //  this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -188,6 +247,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FoodCategoryID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Notes;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tsmCalculateQuantity;
+        private System.Windows.Forms.ToolStripSeparator thêmMónĂnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem tsmAddFood;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmUpdateFood;
     }
 }
 

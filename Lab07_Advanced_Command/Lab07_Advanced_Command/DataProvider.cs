@@ -38,8 +38,7 @@ namespace Lab07_Advanced_Command
                     SqlCommand cmd = new SqlCommand(query, connection);
                     if (para != null)
                     {
-                        hasParameter(cmd, query, para);
-                    
+                        hasParameter(cmd, query, para);                    
                     }
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
                     dataAdapter.Fill(data);
@@ -76,6 +75,39 @@ namespace Lab07_Advanced_Command
                 throw ex;
             }
         }
+        public int ExcuteScalar(string query, object[] para = null)
+        {
+            try
+            {
+                int count;
+                using (SqlConnection conn = new SqlConnection(strCon))
+                {
+                    if (conn.State == ConnectionState.Closed) conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    if (para != null)
+                    {
+                        hasParameter(cmd, query, para);
+
+                    }
+                    if (cmd.ExecuteScalar() == null)
+                    {
+                        count = 0;
+                    }
+                    else
+                    {
+                        count = (int)cmd.ExecuteScalar();
+                    }
+                }
+                return count;
+            }
+
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
 
     }
+
 }
